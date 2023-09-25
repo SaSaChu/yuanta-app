@@ -5,6 +5,7 @@ $(function() {
 	let sectionUpBtn = sectionId.find('.dropup');
 	let sectionSubmitBtn = sectionId.find('#ChangeBottomSubmit');
 
+	// 20230925 模擬畫面時會出現不用滑動的狀態，所以加上了判斷，如果不需要的話，function isScrollable 可刪
 	function isScrollable(element) {
 		return element[0].scrollHeight > element[0].clientHeight;
 	};
@@ -49,9 +50,5 @@ $(function() {
 			sectionDownBtn.hide();
 			sectionSubmitBtn.addClass('enabled').removeAttr('disabled');
 		}
-		
-		
-		
-		
 	});
 });

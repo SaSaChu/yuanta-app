@@ -106,6 +106,7 @@ header {
   }
 }
 
+// 20230925 請向上滑動樣式，跟 dropdown 一樣，到時候可合併
 .dropup {
   display: none;
   padding: .5rem;
@@ -305,6 +306,7 @@ header {
   margin-bottom: 0.8em !important;
 }
 
+
 .btn-secondary {
   &:disabled {
     color: #737373 !important;
@@ -312,6 +314,7 @@ header {
     opacity: 1 !important;
   }
 
+  // 20230925 確認送出可點擊時樣式
   &.enabled {
     background-color: #076ED7;
     border-color: #076ED7;
