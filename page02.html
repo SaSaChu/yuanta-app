@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta http-equiv="Content-Language" content="zh-tw">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+
+    <title></title>
+
+    <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/public.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+    
+    <header class="fixed-top">
+      <div class="container-fluid py-2">
+        <div class="row">
+          <div class="col-12 position-relative">
+            <div class="position-absolute top-0">
+              <button class="btn-back"><i class="bi bi-chevron-left text-white"></i></button>
+            </div>
+            <p class="title fw400">資料變更</p>
+          </div>
+          <div class="col-12"><p class="title fw600">9899-050016</p></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt65">
+      <div class="container-fluid p-4">
+        <!-- 01 不可更動姓名 -->
+        <div class="row g-3 pb-3">
+          <div class="col-3"><div class="text-grey">姓名</div></div>
+          <div class="col-9"><div class="text-white text-end">元大大</div></div>
+        </div>
+
+        <!-- 02 修改的表單 -->
+        <form class="row g-3">
+          <!-- 電子郵件 -->
+          <div class="col-8">
+            <label for="inputEmail4" class="form-label w-100 text-white">電子郵件</label>
+            <input type="email" class="form-control" id=" " value="yua*****@yuanta.com">
+          </div>
+          <div class="col-4">
+            <label for="inputcheck" class="form-label">驗證</label>
+            <p class="checkok14 mt-2"><i class="bi bi-check-circle-fill pe-2"></i>驗證成功</p>
+          </div>
+
+
+          <!-- 行動電話 -->
+          <div class="col-8">
+            <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
+            <input type=" " class="form-control" id=" " value="0912 *** 456">
+          </div>
+          <div class="col-4">
+            <label for="inputnumber" class="form-label">驗證碼</label>
+            <button type="button" class="w-100 btn btn-primary">發送驗證碼</button>
+          </div>
+          <div class="col-12 mt-2"><p class="note14">0911 *** 333</p></div>
+
+
+          <!-- 住家電話(非必填) -->
+          <div class="col-12">
+            <label for="inputphone" class="form-label w-100 text-white">住家電話(非必填)</label>
+          </div>
+          <div class="col-4 mt-0">
+            <input type=" " class="form-control" id=" " placeholder="區碼">
+          </div>
+          <div class="col-8 mt-0">
+            <input type=" " class="form-control" id=" " placeholder="請輸入電話號碼">
+          </div>
+
+          <!-- 通訊地址 -->
+
+          <!-- 行業別 -->
+          <div class="col-12">
+            <label for="inputAddress" class="form-label text-white">行業別</label>
+            <select id=" " class="form-select" data-bs-toggle="offcanvas" data-bs-target="#industryBottom" aria-controls="industryBottom">
+              <option selected>金融業</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <!-- 服務機構 -->
+          <div class="col-12">
+            <label for=" " class="form-label text-white">服務機構</label>
+            <input type="text" class="form-control" id=" " value="元大金控">
+          </div>
+
+          <!-- 職稱 -->
+          <div class="col-12">
+            <label for=" " class="form-label text-white">職稱</label>
+            <input type="text" class="form-control" id=" " value="專員">
+          </div>
+
+          <!-- 年資 -->
+          <div class="col-12">
+            <label for=" " class="form-label text-white">年資</label>
+            <input type="text" class="form-control" id=" " value="10">
+          </div>
+        </form>
+      </div>
+    </main>
+
+    
+    <div class="container-fluid p-3">
+      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
+
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary btn50">取消</button>
+        <button type="button" class="btn btn-primary btn50">下一步</button>
+      </div>
+    </div>
+
+
+    <!-- 注意事項的光箱 -->
+    <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="noteBottom" aria-labelledby="note">
+      <div class="offcanvas-header">
+        <div class="text-industry-title fw400" id="note">注意事項</div>
+        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-3">
+        <p class="note-text" title="1.">資料申請每日限一次(可一次申請變更多個項目)。</p>
+        <p class="note-text" title="2.">若需變更姓名、出生年月日、戶籍地址等資料者，請洽所屬業務人員。</p>
+        <p class="note-text" title="3.">資料變更自本公司以電子郵件或手機簡訊通知日生效。</p>
+        <p class="note-text" title="4.">變更行動電話或電子信箱驗證碼發送說明：</p>
+        <p class="note-text dot" title="・">若於 1 分鐘內沒有收到驗證碼，請再次選「發送驗證碼」重新發送，一旦重新申請驗證碼或是輸入錯誤達 3 次或超過驗證碼有效期限，前次申請之驗證碼即會失效。</p>
+        <p class="note-text dot" title="・">申請「拒收企業簡訊」或手機安裝攔截簡訊APP，有可能自動封鎖或攔截本系統所發送之簡訊，導致驗證碼簡訊無法正常接收。</p>
+        <p class="note-text dot" title="・">對申請過程若有任何問題，請洽所屬業務人員。</p>
+      </div>
+    </div>
+
+
+    <!-- 行業別的光箱 -->
+    <div class="offcanvas offcanvas-bottom Off-CB-75" tabindex="-1" id="industryBottom" aria-labelledby="industry">
+      <div class="offcanvas-header">
+        <div class="text-industry-title fw400" id="industry">行業別</div>
+        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">農、林、漁、牧業</li>
+          <li class="list-group-item">礦業及土石採取業</li>
+          <li class="list-group-item">製造業</li>
+          <li class="list-group-item">電力及燃氣供應業</li>
+          <li class="list-group-item">用水供應及污染整治業</li>
+          <li class="list-group-item">營造業</li>
+          <li class="list-group-item">批發及零售業</li>
+          <li class="list-group-item">運輸及倉儲業</li>
+          <li class="list-group-item">住宿及餐飲業</li>
+          <li class="list-group-item">資訊及通訊傳播業</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
