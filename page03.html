@@ -8,7 +8,9 @@
     <title></title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/imgLiquid-min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
+    <script language="javascript" type="text/javascript" src="js/page03.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
@@ -17,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
-
+    
   </head>
 
   <body>
@@ -91,9 +93,11 @@
     </div>
 
     <!-- 變更客戶基本資料申請書 的光箱 -->
-    <div class="offcanvas offcanvas-bottom Off-CB-95" tabindex="-1" id="ChangeBottom" aria-labelledby="note">
+    <!-- 20230925 aria-labelledby 改為ChangeNote (是因為跟注意事項光箱的 id 一樣，目前操作是不影響到，但以防萬一)-->
+    <div class="offcanvas offcanvas-bottom Off-CB-95" tabindex="-1" id="ChangeBottom" aria-labelledby="ChangeNote">
       <div class="offcanvas-header">
-        <div class="text-industry-title fw400" id="note">變更客戶基本資料申請書</div>
+        <!-- 20230925 id 改為ChangeNote -->
+        <div class="text-industry-title fw400" id="ChangeNote">變更客戶基本資料申請書</div>
         <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-3">
@@ -106,10 +110,12 @@
           <div>4.權利義務：您享有本行提供之各項服務，但應依照相關規定及個別約定使用，並應依法繳納相關稅款及費用。本行有權根據法令、監管要求或業務需要，變更或暫停相關服務，並得於必要時，解除或停止您的帳戶權限。如有任何問題或疑慮，請隨時與本行聯繫。</div>
         </div>
       </div>
-
       <div class="container-fluid fixed-bottom bg-dark text-center p-3">
+        <!-- 20230925 新增 dropup 預設為 display:none (css 有新增 .dropup，但內容跟 dropdown 一樣，到時候可合併) -->
+        <button type="button" class="btn dropup mb-3">請向上滑動<i class="bi bi-chevron-bar-up ps-2"></i></button>
         <button type="button" class="btn dropdown mb-3">請向下滑動<i class="bi bi-chevron-bar-down ps-2"></i></button>
-        <button type="button" class="btn btn-secondary w-100" disabled>確認送出</button>
+        <!-- 20230925 加上 id ChangeBottomSubmit-->
+        <button type="button" class="btn btn-secondary w-100" id="ChangeBottomSubmit" disabled>確認送出</button>
       </div>
     </div>
 

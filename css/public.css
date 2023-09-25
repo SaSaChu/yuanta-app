@@ -3034,6 +3034,9 @@ header { display: inline-block; width: 100%; height: 65px; background-color: #27
 .dropdown { display: inline-block; padding: .5rem; color: white; font-size: .9rem; background-color: #737373; text-align: center; }
 .dropdown:hover { color: white !important; }
 
+.dropup { display: none; padding: .5rem; color: white; font-size: .9rem; background-color: #737373; text-align: center; }
+.dropup:hover { color: white !important; }
+
 .title { color: white; text-align: center; }
 
 .text-note { display: inline-block; width: 100%; font-size: .9rem; color: #6BB2FA; text-align: center; }
@@ -3103,6 +3106,7 @@ header { display: inline-block; width: 100%; height: 65px; background-color: #27
 .form-check { margin-bottom: 0.8em !important; }
 
 .btn-secondary:disabled { color: #737373 !important; background-color: #929292 !important; opacity: 1 !important; }
+.btn-secondary.enabled { background-color: #076ED7; border-color: #076ED7; color: white; }
 
 .form-control { color: white !important; background-color: #525252 !important; border: 1px solid #525252 !important; }
 .form-control:focus { box-shadow: 0 0 0 0.25rem rgba(125, 125, 125, 0.25); }
