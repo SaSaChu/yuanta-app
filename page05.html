@@ -8,6 +8,7 @@
     <title></title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/imgLiquid-min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -18,6 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 
+    <!-- 20230926 新增 .list-group-item:nth-of-type 預設顯示三個，要增加或減少修改(n+4)的數字即可-->
+    <style>
+      .list-group-item:nth-of-type(n+4) {
+        display: none;
+      }
+    </style>
   </head>
 
   <body>
@@ -59,9 +66,45 @@
                   <div class="col-4 ps-0">9862*****67</div>
                 </div>
               </li>
+              <li class="list-group-item px-0">
+                <div class="row">
+                  <div class="col-8">元大證券-南京分公司</div>
+                  <div class="col-4 ps-0">9862*****67</div>
+                </div>
+              </li>
+              <li class="list-group-item px-0">
+                <div class="row">
+                  <div class="col-8">元大證券-南京分公司</div>
+                  <div class="col-4 ps-0">9862*****67</div>
+                </div>
+              </li>
             </ul>
-          <div class="text-note">查看更多<i class="bi bi-chevron-down ps-2"></i></i></div>
+            <!-- 20230926 加上 div class "list-toggle"、span class="list-toggle-text" -->
+          <div class="text-note list-toggle"><span class="list-toggle-text">查看更多</span><i class="bi bi-chevron-up ps-2"></i></div>
         </div>
+        <!-- 20230926 新增 script 預設顯示三個，要增加或減少修改(n+4)的數字即可 start-->
+        <script>
+          $(function() {
+
+            $('.list-toggle').click(function() {
+              if($('.list-group-item').is(':hidden')){
+                // $('.list-group-item:nth-of-type(3)').css({'border-bottom-width': '0'})
+                $('.list-group-item:nth-of-type(n+4)').slideDown(500, function() {
+                  $(this).css({'display':'block'}); 
+                })
+                $(this).find('.list-toggle-text').text('收合');
+                $(this).find('i').removeClass('bi-chevron-down').addClass('bi-chevron-up');
+              } else {
+                // $('.list-group-item:nth-of-type(3)').css({'border-bottom-width': '1px'})
+                $('.list-group-item:nth-of-type(n+4)').slideUp(500)
+                $(this).find('.list-toggle-text').text('查看更多');
+                $(this).find('i').removeClass('bi-chevron-up').addClass('bi-chevron-down');
+              }
+              
+            })
+          });
+        </script>
+        <!-- 20230926 新增 script 預設顯示三個，要增加或減少修改數字即可 end-->
 
         <!-- 輸入集保帳號 -->
         <div class="allboxs mb-4">
