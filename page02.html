@@ -8,6 +8,8 @@
     <title></title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/imgLiquid-min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/page02.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -18,6 +20,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 
+    <style>
+      /* 2020925 可改名，改名後記得 tag 裡的 class 也要修改 */
+      .form-select-bg {
+        color: rgb(255 255 255) !important;
+        background-color: rgb(82 82 82) !important;
+        border: 1px solid rgb(82 82 82) !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e")
+      }
+    </style>
   </head>
 
   <body>
@@ -45,7 +56,7 @@
         </div>
 
         <!-- 02 修改的表單 -->
-        <form class="row g-3">
+        <form class="row g-3" method="post" action>
           <!-- 電子郵件 -->
           <div class="col-8">
             <label for="inputEmail4" class="form-label w-100 text-white">電子郵件</label>
@@ -80,16 +91,53 @@
             <input type=" " class="form-control" id=" " placeholder="請輸入電話號碼">
           </div>
 
-          <!-- 通訊地址 -->
 
-          <!-- 行業別 -->
-          <div class="col-12">
-            <label for="inputAddress" class="form-label text-white">行業別</label>
-            <select id=" " class="form-select" data-bs-toggle="offcanvas" data-bs-target="#industryBottom" aria-controls="industryBottom">
-              <option selected>金融業</option>
+          <!-- 通訊地址 -->
+          <div class="col-6">
+            <label for="inputadd" class="form-label w-100 text-white">通訊地址</label>
+            <select id="inputadd" class="form-select">
+              <option selected>臺北市</option>
               <option>...</option>
             </select>
           </div>
+          <div class="col-6">
+            <label for="inputadd" class="form-label">通訊地址</label>
+            <select id="inputadd" class="form-select">
+              <option selected>105松山區</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id=" " value="**">
+          </div>
+          <div class="col-3">
+             <select id="inputadd" class="form-select">
+              <option selected>里</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-2">
+            <input type="text" class="form-control" id=" " value="*">
+          </div>
+          <div class="col-1">
+            <span class="w-100 text-white lh38">鄰</span>
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control" id=" " value="**** *** 1 樓">
+          </div>
+
+
+          <!-- 行業別 -->
+          <div class="col-12">
+            <label for=" " class="form-label text-white">行業別</label>
+            <!-- 2020925 新增隱藏 input 用來放選擇後的值 -->
+            <input type="hidden" name="industryInput">
+            <!-- 新增自製 select 連動行業別的光箱 (form-select-bg css 寫在上面)-->
+            <div class="form-select form-select-bg" data-bs-toggle="offcanvas" data-bs-target="#industryBottom" aria-controls="industryBottom">
+              <span class="industrySpan">金融業</span>
+            </div>
+          </div>
+
 
           <!-- 服務機構 -->
           <div class="col-12">
@@ -97,11 +145,13 @@
             <input type="text" class="form-control" id=" " value="元大金控">
           </div>
 
+
           <!-- 職稱 -->
           <div class="col-12">
             <label for=" " class="form-label text-white">職稱</label>
             <input type="text" class="form-control" id=" " value="專員">
           </div>
+
 
           <!-- 年資 -->
           <div class="col-12">
@@ -149,16 +199,17 @@
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">農、林、漁、牧業</li>
-          <li class="list-group-item">礦業及土石採取業</li>
-          <li class="list-group-item">製造業</li>
-          <li class="list-group-item">電力及燃氣供應業</li>
-          <li class="list-group-item">用水供應及污染整治業</li>
-          <li class="list-group-item">營造業</li>
-          <li class="list-group-item">批發及零售業</li>
-          <li class="list-group-item">運輸及倉儲業</li>
-          <li class="list-group-item">住宿及餐飲業</li>
-          <li class="list-group-item">資訊及通訊傳播業</li>
+          <!-- 2020925 加上 data-value，可修改值 -->
+          <li class="list-group-item" data-value="1">農、林、漁、牧業</li>
+          <li class="list-group-item" data-value="2">礦業及土石採取業</li>
+          <li class="list-group-item" data-value="3">製造業</li>
+          <li class="list-group-item" data-value="4">電力及燃氣供應業</li>
+          <li class="list-group-item" data-value="5">用水供應及污染整治業</li>
+          <li class="list-group-item" data-value="6">營造業</li>
+          <li class="list-group-item" data-value="7">批發及零售業</li>
+          <li class="list-group-item" data-value="8">運輸及倉儲業</li>
+          <li class="list-group-item" data-value="9">住宿及餐飲業</li>
+          <li class="list-group-item" data-value="10">資訊及通訊傳播業</li>
         </ul>
       </div>
     </div>
