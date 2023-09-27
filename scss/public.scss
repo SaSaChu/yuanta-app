@@ -170,6 +170,7 @@ header {
 }
 
 .text-industry-title {
+  width: 100%;
   text-align: center;
   font-size: 1.25rem;
 }
@@ -179,7 +180,11 @@ header {
 }
 
 .text-grey2 {
-  color:#4f4f4f;
+  color:#4f4f4f !important;
+}
+
+.text-grey3 {
+  color:#929292 !important;
 }
 
 .text-yellow {
@@ -204,17 +209,19 @@ header {
   font-size: .9rem;
   padding-bottom: 10px;
   color: white;
-  margin-left: 13px;
+  margin-left: 20px;
 
   &:before {
     display: inline-block;
     content: attr(title);
-    margin-left: -12px;
+    margin-left: -17px;
+    font-weight: bolder;
+    margin-right: 5px;
   }
 
   &.dot {
-    width: calc(100% - 35px);
-    margin-left: 22px;
+    width: calc(100% - 40px);
+    margin-left: 31px;
   }
 
   &.nospace {
@@ -278,7 +285,7 @@ header {
 }
 
 .Off-CB-95 {
-  height: 95vh !important;
+  height: 100vh !important;
 } 
 
 .Off-CB-85 {
@@ -315,6 +322,10 @@ header {
   background-color: #525252;
 }
 
+.bg-bb0 {
+  background-image: linear-gradient(to top, rgba(0,0,0, 1)  0%, rgba(0,0,0, 0) 100%);
+}
+
 
 
 
@@ -348,6 +359,12 @@ header {
   background-color: transparent !important;
   color: white;
   font-size: 1rem;
+}
+
+.input-group-text {
+  color: white;
+  background-color: #525252 !important;
+  border: 1px solid #525252 !important;
 }
 
 .form-check-input {
@@ -405,6 +422,10 @@ header {
       color: #929292 !important;
     }
   }
+
+  &.checkno {
+    border: 1px solid red !important;
+  }
 }
 
 .form-select {
@@ -418,11 +439,9 @@ header {
 }
 
 
-
-
-
-
-
+.list-group-item.lgi:nth-of-type(n+4) {
+  display: none;
+}
 
 
 

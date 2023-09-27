@@ -5,7 +5,7 @@ $(function() {
 	let sectionUpBtn = sectionId.find('.dropup');
 	let sectionSubmitBtn = sectionId.find('#ChangeBottomSubmit');
 
-	// 20230925 模擬畫面時會出現不用滑動的狀態，所以加上了判斷，如果不需要的話，function isScrollable 可刪
+	// 模擬畫面時會出現不用滑動的狀態，所以加上了判斷，如果不需要的話，function isScrollable 可刪
 	function isScrollable(element) {
 		return element[0].scrollHeight > element[0].clientHeight;
 	};
@@ -23,7 +23,7 @@ $(function() {
 	
 	
 	sectionId.on('shown.bs.offcanvas', function () {
-		// 20230925 模擬畫面時會出現不用滑動的狀態，所以加上了判斷，如果不需要的話，留下"保留"區塊程式碼，其餘可刪
+		// 模擬畫面時會出現不用滑動的狀態，所以加上了判斷，如果不需要的話，留下"保留"區塊程式碼，其餘可刪
 		if(isScrollable(sectionBody)) {
 			// 保留 start
 			sectionBody.scroll(function() {

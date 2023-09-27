@@ -29,7 +29,7 @@
             <div class="position-absolute top-0">
               <button class="btn-back"><i class="bi bi-chevron-left text-white"></i></button>
             </div>
-            <p class="title fw400">資料變更</p>
+            <p class="title fw400">功能名稱</p>
           </div>
           <div class="col-12"><p class="title fw600">9899-050016</p></div>
         </div>
@@ -38,16 +38,93 @@
 
     <main class="pt65">
       <div class="container-fluid p-4">
-        <div class="text-center text-white icon-34"><i class="bi bi-check-circle-fill"></i></div>
-        <div class="text-center text-white t-18 fw400 pb-4">資料變更申請成功</div>
-        <div class="d-inline text-white">您的基本資料已變更！</div>
-        <div class="text-yellow">提醒您，資料系統變更成功將另以電子郵件及簡訊通知。</div>
+        <div class="row g-3" method="post" action>
+
+          <!-- 行動電話：無key資料 -->
+          <h3 class="text-warning">行動電話：無key資料</h3>
+          <div class="col-8">
+            <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
+            <input type=" " class="form-control" id=" " value="0912 *** 456">
+          </div>
+          <div class="col-4">
+            <label for="inputnumber" class="form-label">驗證碼</label>
+            <button type="button" class="w-100 btn btn-primary">發送驗證碼</button>
+          </div>
+          <div class="col-12 mt-2"><p class="note14">0911 *** 333</p></div>
+
+
+          <!-- 行動電話：按了發送 -->
+          <h3 class="text-warning mt-5">行動電話：按了發送</h3>
+          <!-- 按下後的狀態 -->
+          <h5 class="text-info my-0">按下後的狀態</h5>
+          <div class="col-8">
+            <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
+            <input type=" " class="form-control" id=" " value="0912 *** 456" disabled>
+          </div>
+          <div class="col-4">
+            <label for="inputnumber" class="form-label">驗證碼</label>
+            <button type="button" class="w-100 btn btn-secondary" disabled>發送驗證碼</button>
+          </div>
+          <div class="col-12 mt-2"><p class="note14">0911 *** 333</p></div>
+
+          <!-- 等待簡訊狀態 --></br></br>
+          <h5 class="text-info mb-0">等待簡訊狀態：未key欄位，隔一分鐘後</h5>
+          <div class="col-8">
+            <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
+            <input type=" " class="form-control" id=" " placeholder="請輸入驗證碼">
+          </div>
+          <div class="col-4">
+            <label for="inputnumber" class="form-label">驗證碼</label>
+            <button type="button" class="w-100 btn btn btn-primary">進行驗證</button>
+          </div>
+          <div class="col-12 mt-2"><p class="note14">系統已發送驗證碼，請於 <i class="text-yellow" style="font-style: normal;">300</i> 秒內驗證完成</p></div>
+
+          </br></br>
+
+          <h5 class="text-info mb-0">等待簡訊狀態：秒數失效後</h5>
+          <div class="col-8">
+            <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
+            <input type=" " class="form-control" id=" " placeholder="請輸入驗證碼">
+          </div>
+          <div class="col-4">
+            <label for="inputnumber" class="form-label">驗證碼</label>
+            <button type="button" class="w-100 btn btn btn-secondary" disabled>進行驗證</button>
+          </div>
+          <div class="col-12 mt-2"><p class="note14">驗證碼已失效，請重新點擊發送驗證碼</p></div>
+
+          <!-- 行動電話：驗證成功 -->
+          <h3 class="text-warning mt-5">行動電話：驗證成功</h3>
+          <div class="col-8">
+            <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
+            <input type=" " class="form-control" id=" " value="0912 *** 456" disabled>
+          </div>
+          <div class="col-4">
+            <label for="inputcheck" class="form-label">驗證</label>
+            <p class="checkok14 fw400 mt-2"><i class="bi bi-check-circle pe-2"></i>驗證成功</p>
+          </div>
+
+          <!-- 行動電話：驗證失敗 -->
+          <h3 class="text-warning mt-5">行動電話：驗證失敗</h3>
+          <div class="col-8">
+            <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
+            <input type=" " class="form-control checkno" id=" " value="0912 *** 456">
+          </div>
+          <div class="col-4">
+            <label for="inputcheck" class="form-label">驗證</label>
+            <p class="checkok14 fw400  text-danger mt-2"><i class="bi bi-x-circle pe-2"></i>驗證失敗</p>
+          </div>
+          <div class="col-12 mt-2"><p class="note14 text-danger">手機驗證失敗，請重新輸入文字文字文字文字</p></div>
+
+          <!-- 行動電話：其他 -->
+          <h3 class="text-warning mt-5">行動電話：其他</h3>
+          <img src="images/pic08.png" class="img-fluid" alt="">
+          <img src="images/pic09.png" class="img-fluid" alt="">
+          <img src="images/pic10.png" class="img-fluid" alt="">
+        </div>
       </div>
     </main>
 
-    <div class="container-fluid fixed-bottom p-3">
-      <button type="button" class="btn btn-primary btn100">回股票借貸</button>
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"

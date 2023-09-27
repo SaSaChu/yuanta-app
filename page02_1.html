@@ -29,7 +29,7 @@
             <div class="position-absolute top-0">
               <button class="btn-back"><i class="bi bi-chevron-left text-white"></i></button>
             </div>
-            <p class="title fw400">資料變更</p>
+            <p class="title fw400">額度調整</p>
           </div>
           <div class="col-12"><p class="title fw600">9899-050016</p></div>
         </div>
@@ -38,52 +38,65 @@
 
     <main class="pt65">
       <div class="container-fluid p-4">
-        <div class="allboxs bg-gray3 rounded p-3 mb-4">
-          <div class="row g-3">
-            <div class="col-12">
-              <p class="text-ing fw400"><i class="bi bi-exclamation-triangle-fill pe-2"></i>審核進行中</p>
-            </div>
-            <div class="col-12 mt-2">
-              <p class="box24 text-white">請依通知完成補件！</p>
-            </div>
-          </div>
-        </div>
-
+        <!-- 區塊01 -->
         <div class="allboxs bg-gray2 rounded p-3 mb-4">
           <div class="row g-3">
-            <div class="col-8"><div class="text-grey">目前額度</div></div>
-            <div class="col-4"><div class="text-white text-end">600 萬</div></div>
+            <div class="col-9"><div class="text-grey">目前額度</div></div>
+            <div class="col-3"><div class="text-white text-end">100 萬</div></div>
 
             <div class="col-12">
-              <label for=" " class="form-label text-grey2 fw400">申請額度</label>
-              <input type="text" class="form-control pL" id=" " placeholder="600萬"  disabled>
+              <label for=" " class="form-label text-white fw400">申請額度</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-label=" " aria-describedby="basic-addon2" value="600">
+                <span class="input-group-text" id="basic-addon2">萬</span>
+              </div>
             </div>
 
-            <div class="col-8"><div class="text-grey">需檢附財力證明</div></div>
-            <div class="col-4"><div class="text-white text-end">180 萬</div></div>
-            <div class="col-8"><div class="text-grey">未借股票市值</div></div>
-            <div class="col-4"><div class="text-white text-end">120 萬</div></div>
-            <div class="col-8"><div class="text-grey">此次需檢附財力證明</div></div>
-            <div class="col-4"><div class="text-yellow text-end">60 萬</div></div>
+            <div class="col-9"><div class="text-grey">需檢附財力證明</div></div>
+            <div class="col-3"><div class="text-white text-end">180 萬</div></div>
+            <div class="col-9"><div class="text-grey">未借股票市值</div></div>
+            <div class="col-3"><div class="text-white text-end">120 萬</div></div>
+            <div class="col-9"><div class="text-grey">此次需檢附財力證明</div></div>
+            <div class="col-3"><div class="text-yellow text-end">60 萬</div></div>
           </div>
         </div>
 
+        <!-- 區塊02 -->
         <div class="mb-2">
           <span class="text-white fw400">財力證明</span>
           <i class="bi bi-exclamation-circle text-lbule ps-2" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom"></i>
         </div>
 
+        <!-- 上傳財力證明顯示金額 -->
         <div class="row g-3">
-          <div class="col-8"><div class="text-grey">請上傳財力證明</div></div>
-          <div class="col-4"><div class="text-yellow text-end">60 萬</div></div>
+          <div class="col-9"><div class="text-grey">請上傳財力證明</div></div>
+          <div class="col-3"><div class="text-yellow text-end">60 萬</div></div>
         </div>
 
+        <!-- 已上傳檔案顯示區 -->
+        <div class="allboxs bg-gray2 rounded p-3 my-2">
+          <div class="row g-3">
+            <div class="col-9">
+              <div class="d-flex align-items-center">
+                <div class="flex-shrink-0">
+                  <img src="images/pic01.png" alt=" ">
+                </div>
+                <div class="flex-grow-1 note14 ms-3">IMG12345.png</div>
+              </div>
+            </div>
+            <div class="col-3"><button type="button" class="btn btn-secondary float-end">刪除</button></div>
+          </div>
+        </div>
+
+        <!-- 上傳區 -->
         <div class="allboxs bg-gray2 rounded p-3 my-2">
           <div class="row g-3">
             <div class="col-9"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
             <div class="col-3"><button type="button" class="btn btn-primary float-end">上傳</button></div>
           </div>
         </div>
+
+        <p class="note14">最多新增 6 筆</p>
 
         <a class="addnew float-end"><i class="bi bi-plus pe-1"></i>再新增一筆</a>
       </div>
@@ -97,6 +110,12 @@
         <button type="button" class="btn btn-primary btn50">下一步</button>
       </div>
     </div>
+    
+
+
+    <!-- 以下是光箱區 -->
+
+
 
     <!-- 財力證明的光箱 -->
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="financialBottom" aria-labelledby="note">
@@ -106,13 +125,15 @@
       </div>
 
       <div class="offcanvas-body p-3">
-        <p class="note-text">財力證明：核准額度30%</p>
-        <p class="note-text">財力證明可提供如下任一資料：</p>
-        <p class="note-text" title="1.">最近一個月之有價證券、銀行存款、黃金存摺、信託資產</p>
-        <p class="note-text" title="2.">不動產 (需由證金評估)</p>
-        <p class="note-text pb-4" title="3.">全年薪資收入</p>
-        <p class="note-text text-yellow" title="・">以上財力證明需明顯辨識本人姓名</p>
-        <p class="note-text text-yellow" title="・">目前額度不含其它授信額度與信用交易需檢附財力證明金額已審核結果為準。</p>
+        <p class="note-text" title="1.">財力證明：申請額度之30%。</p>
+        <p class="note-text" title="2.">財力證明，可提供以下任一文件：</p>
+        <p class="note-text dot" title="(1)">最近一個月之持有有價證券 證明 如 實體存摺或集保 e 存摺庫存明細 、 黃金帳戶餘額證明、信託財產證明。</p>
+        <p class="note-text dot" title="(2)">最近一個月之金融機構平均存款餘額證明</p>
+        <p class="note-text dot" title="(3)">不動產所有權、登記謄本或繳稅單 須由本公司計算其價值 。</p>
+        <p class="note-text dot" title="(4)">扣繳憑單。</p>
+
+        <p class="note-text text-yellow mt-3 pb-0" title="*">以上財力證明文件需明顯辨識本人姓名</p>
+        <p class="note-text text-yellow " title="*">目前額度不含其他授信額度，額度調整需以本公司最終審核結果為準。</p>
       </div>
     </div>
 
@@ -124,12 +145,13 @@
         <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-3">
-        <p class="note-text" title="1.">資料申請每日限一次(可一次申請變更多個項目)。</p>
-        <p class="note-text" title="2.">若需變更姓名、出生年月日、戶籍地址等資料者，請洽所屬業務人員。</p>
-        <p class="note-text" title="3.">資料變更自本公司以電子郵件或手機簡訊通知日生效。</p>
-        <p class="note-text" title="4.">變更行動電話或電子信箱驗證碼發送說明：</p>
-        <p class="note-text dot" title="・">若於 1 分鐘內沒有收到驗證碼，請再次選「發送驗證碼」重新發送，一旦重新申請驗證碼或是輸入錯誤達 3 次或超過驗證碼有效期限，前次申請之驗證碼即會失效。</p>
-        <p class="note-text dot" title="・">申請「拒收企業簡訊」或手機安裝攔截簡訊APP，有可能自動封鎖或攔截本系統所發送之簡訊，導致驗證碼簡訊無法正常接收。</p>
+        <p class="note-text" title="1.">＊為必填欄位。</p>
+        <p class="note-text" title="2.">資料變更申請每日限一次 可一次申請變更多個項目。</p>
+        <p class="note-text" title="3.">若需變更姓名、出生年月日、戶籍地址等資料者，請洽所屬業務人員。</p>
+        <p class="note-text" title="4.">資料變更自本公司以電子郵件或手機簡訊通知日生效。</p>
+        <p class="note-text" title="5.">變更行動電話或電子信箱驗證碼發送</br>說明：</p>
+        <p class="note-text dot" title="・">若於 1 分鐘內沒有收到驗證碼，請再次點選「發送驗證碼」重新發送，一旦重新申請驗證碼或是輸入錯誤達三次或超過驗證碼有效期限，前次申請之驗證碼即會失效。</p>
+        <p class="note-text dot" title="・">申請「拒收企業簡訊」或手機安裝攔截簡訊 APP ，有可能自動封鎖或攔截本系統所發送之簡訊，導致驗證碼簡訊無法正常接收。</p>
         <p class="note-text dot" title="・">對申請過程若有任何問題，請洽所屬業務人員。</p>
       </div>
     </div>
