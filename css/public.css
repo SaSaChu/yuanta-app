@@ -3027,9 +3027,9 @@ header { display: inline-block; width: 100%; height: 65px; background-color: #27
 
 .box24 { display: inline-block; width: 100%; padding-left: 24px; }
 
-.btn100 { width: 100%; height: 48px; }
+.btn100 { width: 100%; }
 
-.btn50 { width: 48%; height: 48px; }
+.btn50 { width: 48%; }
 
 .btn-back { background-color: transparent; }
 
