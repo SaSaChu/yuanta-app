@@ -342,7 +342,11 @@ header {
 }
 
 .modal-backdrop {
-  background-color: white !important;
+  background-color: #525252 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0.7 !important;
 }
 
 .offcanvas-body {
