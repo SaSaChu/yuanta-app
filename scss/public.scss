@@ -199,6 +199,12 @@ header {
   color: #6BB2FA;
 }
 
+.text-dis {
+  color: #525252 !important;
+  background-color: #323232 !important;
+  border:  #323232 !important;
+}
+
 .lgi14 {
   font-size: .9rem !important;
 }
@@ -408,16 +414,25 @@ header {
 }
 
 .form-control {
-  color: white !important;
-  background-color: #525252 !important;
-  border: 1px solid #525252 !important;
+  // color: white !important;
+  // background-color: #525252 !important;
+  // border: 1px solid #525252 !important;
 
   &:focus {
-    box-shadow: 0 0 0 0.25rem rgba(125, 125, 125, 0.25);
+    // border: rgba(33, 37, 41, 1) !important;
+    // background-color: #525252 !important;
+    color: white;
+    box-shadow: unset !important;
   }
 
   &::placeholder {
     color: #929292 !important;
+  }
+
+  &::disabled {
+    opacity: 1;
+    color: red !important;
+    -webkit-text-fill-color: red !important;
   }
 
   &.pL {
@@ -438,6 +453,7 @@ header {
   border: 1px solid #525252 !important;
 
   &:focus {
+    // box-shadow: 0 important;
     box-shadow: 0 0 0 0.25rem rgba(125, 125, 125, 0.25);
   }
 }
@@ -447,15 +463,54 @@ header {
   display: none;
 }
 
+.invalid-feedback {
+  margin-top: 0.5rem !important;
+  font-size: 0.9rem !important;
+}
+
+.is-invalid {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><defs><style>.uuid-ab1a8be1-3d48-4610-9173-af87690b57fd{fill:%23fff;}.uuid-b8ed9548-ca09-4513-babd-436ad4225d85{fill:%23e53838;}</style></defs><circle class="uuid-b8ed9548-ca09-4513-babd-436ad4225d85" cx="8" cy="8" r="7.91"/><path class="uuid-ab1a8be1-3d48-4610-9173-af87690b57fd" d="m8,4.04s.06,0,.09,0c.49.05.85.49.8.98l-.35,3.47c-.02.26-.23.48-.5.5-.3.03-.56-.2-.59-.5l-.35-3.47s0-.06,0-.09c0-.49.4-.9.89-.9Z"/><circle class="uuid-ab1a8be1-3d48-4610-9173-af87690b57fd" cx="8" cy="10.97" r=".99"/></svg>') !important;
+}
+
+.is-valid {
+  border-color: #FEAE2A !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16"><defs><style>.uuid-a3943590-1dd9-4275-a5ac-7448c9a3f947{fill:%23feae2a;}</style></defs><path class="uuid-a3943590-1dd9-4275-a5ac-7448c9a3f947" d="m8.98,1.57c-.31-.54-1-.73-1.54-.42-.17.1-.32.24-.42.42L.17,13.23c-.46.78.09,1.77.98,1.77h13.71c.89,0,1.44-.99.98-1.77L8.98,1.57Z"/><path d="m8,5c.53,0,.95.46.9.99l-.35,3.51c-.03.3-.29.53-.6.5-.27-.02-.48-.24-.5-.5l-.35-3.51c-.05-.5.31-.94.81-.99.03,0,.06,0,.09,0Z"/><circle cx="8" cy="12" r="1"/></svg>') !important;
+}
+
+.valid-feedback {
+  color: #FEAE2A !important;
+  margin-top: 0.5rem !important;
+  font-size: 0.9rem !important;
+}
 
 
 
 
+.right-r {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
 
+.left-r {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
 
+.btn-typing {
+  background-color: #525252;
+  color: #BCBCBC;
+  padding: 0 10px !important;
 
+  &:hover {
+    color: #BCBCBC;
+    box-shadow: unset !important;
+  }
+}
 
-
+.border-white {
+  border: 1px solid white;
+  @include border-radius(0.25rem);
+}
 
 
 
