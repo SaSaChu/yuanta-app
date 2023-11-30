@@ -166,22 +166,20 @@
       </div>
     </main>
 
-    
-    <div class="container-fluid p-3">
+    <!-- 1130 加了bg-black、fixed-bottom -->
+    <div class="container-fluid p-3 bg-black fixed-bottom">
       <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
 
       <div class="d-flex justify-content-between">
-        <button type="button" class="btn btn-secondary btn50">取消</button>
-        <button type="button" class="btn btn-primary btn50">下一步</button>
+        <!-- 1130 按鈕都加了h48 -->
+        <button type="button" class="btn btn-secondary btn50 h48">取消</button>
+        <button type="button" class="btn btn-primary btn50 h48">下一步</button>
       </div>
     </div>
 
 
 
     <!-- 以下是光箱區 -->
-
-
-
     <!-- 注意事項的光箱 -->
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="noteBottom" aria-labelledby="note">
       <div class="offcanvas-header">
@@ -202,14 +200,27 @@
 
 
     <!-- 行業別的光箱 -->
-    <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="industryBottom" aria-labelledby="industry">
+    <!-- 1130 Off-CB-auto 改 Off-CB-85 -->
+    <div class="offcanvas offcanvas-bottom Off-CB-85" tabindex="-1" id="industryBottom" aria-labelledby="industry">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="industry">行業別</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1130 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">
           <!-- data-value，可修改值 -->
+          <!-- 1130 選中的選項樣式參考第一個li，增加text-llbule、<i class="bi bi-check2 fs-5 text-llbule float-end"></i> -->
+          <li class="list-group-item text-llbule" data-value="1">行業別-1 <i class="bi bi-check2 fs-5 text-llbule float-end"></i></li>
+          <li class="list-group-item" data-value="2">行業別-2</li>
+          <li class="list-group-item" data-value="3">行業別-3</li>
+          <li class="list-group-item" data-value="4">行業別-4</li>
+          <li class="list-group-item" data-value="5">行業別-5</li>
+          <li class="list-group-item" data-value="6">行業別-6</li>
+          <li class="list-group-item" data-value="7">行業別-7</li>
+          <li class="list-group-item" data-value="8">行業別-8</li>
+          <li class="list-group-item" data-value="9">行業別-9</li>
+          <li class="list-group-item" data-value="10">行業別-10</li>
           <li class="list-group-item" data-value="1">行業別-1</li>
           <li class="list-group-item" data-value="2">行業別-2</li>
           <li class="list-group-item" data-value="3">行業別-3</li>

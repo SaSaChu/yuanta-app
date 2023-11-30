@@ -199,6 +199,10 @@ header {
   color: #6BB2FA;
 }
 
+.text-llbule {
+  color: #9CCCFC !important;
+}
+
 .text-dis {
   color: #525252 !important;
   background-color: #323232 !important;
@@ -281,6 +285,14 @@ header {
   padding-bottom: 110px;
 }
 
+.mb-160 {
+  margin-bottom: 160px;
+}
+
+.mb-130 {
+  margin-bottom: 130px;
+}
+
 
 
 // other
@@ -335,6 +347,14 @@ header {
   background-image: linear-gradient(to top, rgba(0,0,0, 1)  0%, rgba(0,0,0, 0) 100%);
 }
 
+.h48 {
+  height: 48px;
+  line-height: 36px;
+}
+
+.bg-black {
+  background-color: black;
+}
 
 
 
@@ -372,6 +392,8 @@ header {
   background-color: transparent !important;
   color: white;
   font-size: 1rem;
+  height: 56px;
+  line-height: 40px;
 }
 
 .input-group-text {
@@ -392,6 +414,7 @@ header {
 }
 
 .btn-close {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M11.2355 1.94265C11.4308 1.74739 11.4308 1.43081 11.2355 1.23555L10.7643 0.764319C10.5691 0.569057 10.2525 0.569058 10.0572 0.76432L5.99993 4.8216L1.94265 0.76432C1.74739 0.569058 1.43081 0.569058 1.23555 0.76432L0.76432 1.23555C0.569057 1.43081 0.569058 1.74739 0.76432 1.94265L4.8216 5.99993L0.76432 10.0572C0.569058 10.2525 0.569058 10.5691 0.76432 10.7643L1.23555 11.2355C1.43081 11.4308 1.74739 11.4308 1.94265 11.2355L5.99993 7.17827L10.0572 11.2355C10.2525 11.4308 10.5691 11.4308 10.7643 11.2355L11.2355 10.7643C11.4308 10.5691 11.4308 10.2525 11.2355 10.0572L7.17827 5.99993L11.2355 1.94265Z" fill="white"/></svg>') !important;
 
   &:focus {
     outline: 0;
@@ -417,6 +440,8 @@ header {
 }
 
 .form-control {
+  padding: 8px 12px 8px 16px !important;
+  border-radius: 4px !important;
   // color: white !important;
   // background-color: #525252 !important;
   // border: 1px solid #525252 !important;
@@ -425,6 +450,7 @@ header {
     // border: rgba(33, 37, 41, 1) !important;
     // background-color: #525252 !important;
     color: white;
+    border-color: #525252 !important;
     box-shadow: unset !important;
   }
 
@@ -486,7 +512,9 @@ header {
   font-size: 0.9rem !important;
 }
 
-
+.rounded {
+  border-radius: 0.5rem !important;
+}
 
 
 .right-r {
@@ -515,6 +543,17 @@ header {
   @include border-radius(0.25rem);
 }
 
+.input-bg-black {
+  background-color: #525252;
+  @include border-radius(4px);
+}
+
+.bg-dark-gradient {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+
+}
 
 
 

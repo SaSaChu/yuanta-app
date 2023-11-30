@@ -110,7 +110,7 @@
   @include border-top-radius($modal-content-inner-border-radius);
 
   .btn-close {
-    padding: ($modal-header-padding-y * .5) ($modal-header-padding-x * .5);
+    // padding: ($modal-header-padding-y * .5) ($modal-header-padding-x * .5);
     margin: ($modal-header-padding-y * -.5) ($modal-header-padding-x * -.5) ($modal-header-padding-y * -.5) auto;
   }
 }

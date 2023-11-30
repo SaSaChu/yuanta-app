@@ -36,7 +36,8 @@
       </div>
     </header>
 
-    <main class="pt65">
+    <!-- 1130 加了mb-130 -->
+    <main class="pt65 mb-130">
       <div class="container-fluid p-4">
         <!-- 集保帳號列表 -->
         <div class="allboxs bg-gray2 rounded px-3 py-2 mb-4">
@@ -58,7 +59,8 @@
               </li>
             </ul>
           <div class="text-note list-toggle pt-2">
-            <span class="list-toggle-text">查看更多</span><i class="bi bi-chevron-up ps-2"></i>
+            <!-- 1130 bi-chevron-up 改為 bi-chevron-down -->
+            <span class="list-toggle-text">查看更多</span><i class="bi bi-chevron-down ps-2"></i>
           </div>
         </div>
 
@@ -91,21 +93,20 @@
       </div>
     </main>
 
-    <div class="container-fluid p-3">
+    <!-- 1130 加了bg-black、fixed-bottom -->
+    <div class="container-fluid p-3 bg-black fixed-bottom">
       <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
 
       <div class="d-flex justify-content-between">
-        <button type="button" class="btn btn-secondary btn50">取消</button>
-        <button type="button" class="btn btn-primary btn50">下一步</button>
+        <!-- 1130 按鈕都加了h48 -->
+        <button type="button" class="btn btn-secondary btn50 h48">取消</button>
+        <button type="button" class="btn btn-primary btn50 h48">下一步</button>
       </div>
     </div>
 
 
 
     <!-- 以下是光箱區 -->
-
-
-
     <!-- 集保存摺的光箱 -->
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="financialBottom" aria-labelledby="note">
       <div class="offcanvas-header">
