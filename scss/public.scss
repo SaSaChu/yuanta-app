@@ -69,12 +69,25 @@ header {
   width: 100%;
 }
 
+#ChangeBottom {
+
+    .text-gradient-on {
+      position: relative;
+      -webkit-mask-image: linear-gradient(black 80%, transparent); 
+    }
+
+    .text-gradinet-off {
+      -webkit-mask-image: none;
+    } 
+  
+}
+
 .changebox {
   display: inline-block;
   width: 100%;
   background-color: #272727;
   color: white;
-  padding: 1.3rem;
+  padding: 1.3rem; 
 }
 
 .box24 {
@@ -82,8 +95,6 @@ header {
   width: 100%;
   padding-left: 24px;
 }
-
-
 
 // button, a
 .btn100 {
@@ -387,6 +398,32 @@ header {
 .offcanvas-header {
   border-bottom: 1px solid rgba($white, .3);
 }
+
+.allboxs:has(.list-group) {
+  position: relative;
+
+  .list-group {
+    .text-gradient-on {
+      -webkit-mask-image: linear-gradient(black 0%, transparent 60%); 
+    }
+  
+    .text-gradinet-off {
+      -webkit-mask-image: none;
+    }  
+  }
+
+  .text-note {
+    &.on {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      padding-top: 0 !important;
+      transform: translate(-50%, -90%);
+    }
+  }
+}
+
+
 
 .list-group-item {
   background-color: transparent !important;

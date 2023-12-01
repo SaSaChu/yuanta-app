@@ -30,11 +30,15 @@ $(function() {
 				if (sectionBody.scrollTop() + sectionBody.innerHeight() >= sectionBody[0].scrollHeight) {
 					dropButtonToggle('up');	
 					sectionSubmitBtn.addClass('enabled').removeAttr('disabled');
+					sectionBody.removeClass('text-gradient-on')
+					sectionBody.addClass('text-gradient-off')
 				}
 	
 				if (sectionBody.scrollTop() + sectionBody.innerHeight() <= sectionBody.innerHeight()) {
 					dropButtonToggle('down');
 					sectionSubmitBtn.removeClass('enabled').attr('disabled','');
+					sectionBody.addClass('text-gradient-off')	
+					sectionBody.addClass('text-gradient-on')	
 				}
 			})
 	
