@@ -304,6 +304,10 @@ header {
   margin-bottom: 130px;
 }
 
+.px-10px {
+  padding: 0 10px;
+}
+
 
 
 // other
@@ -553,6 +557,11 @@ header {
   border-radius: 0.5rem !important;
 }
 
+.rounded-r25 {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
 
 .right-r {
   border-top-right-radius: 0 !important;
@@ -577,6 +586,11 @@ header {
 
 .border-white {
   border: 1px solid white;
+  @include border-radius(0.25rem);
+}
+
+.border-danger {
+  border: 1px solid #E53838;
   @include border-radius(0.25rem);
 }
 

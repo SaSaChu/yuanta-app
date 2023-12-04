@@ -105,6 +105,7 @@
         <div class="text-industry-title fw400" id="ChangeNote">變更客戶基本資料申請書</div>
         <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+      <!-- 1204 增加 text-gradient-on -->
       <div class="offcanvas-body p-3 text-gradient-on">
         <div class="changebox">
           <div class="changetitle text-center pb-3">元大證券金融股份有限公司<br>變更客戶基本資料申請書</div>
@@ -114,11 +115,14 @@
           <p class="note-text" title="3.">若本人提供之資料內容有虛偽不實，以致本人或貴公司或任何第三人權益蒙受損害時，本人願意負擔一切法律及賠償之責任，概與貴公司無涉。</p>
         </div>
       </div>
+      <!-- 1204 增加 pt-0 -->
       <div class="container-fluid bg-dark-gradient text-center p-3 pt-0">
         <!-- 1130 新增『閱讀』二字 -->
-        <button type="button" class="btn dropup mb-3">請向下滑動閱讀<i class="bi bi-chevron-bar-up ps-2"></i></button>
+        <!-- 1204 bi-chevron-bar-up 改為 bi-chevron-bar-down -->
+        <button type="button" class="btn dropup mb-3">請向下滑動閱讀<i class="bi bi-chevron-bar-down ps-2"></i></button>
         <!-- 1130 修改文字『請向上滑動閱讀』 -->
-        <button type="button" class="btn dropdown mb-3">請向上滑動閱讀<i class="bi bi-chevron-bar-down ps-2"></i></button>
+        <!-- 1204 bi-chevron-bar-down 改為 bi-chevron-bar-up -->
+        <button type="button" class="btn dropdown mb-3">請向上滑動閱讀<i class="bi bi-chevron-bar-up ps-2"></i></button>
         <button type="button" class="btn btn-secondary w-100" id="ChangeBottomSubmit" disabled>確認送出</button>
       </div>
     </div>
