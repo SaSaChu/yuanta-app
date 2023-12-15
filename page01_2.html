@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
-    <title></title>
+    <title>page01_2</title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
@@ -37,7 +37,6 @@
       </div>
     </header>
 
-    <!-- 1130 加了mb-160 -->
     <main class="pt65 mb-160">
       <div class="container-fluid p-4">
         <div class="row g-3">
@@ -76,21 +75,21 @@
       </div>
     </main>
 
-    <!-- 1130 加了bg-black -->
     <div class="container-fluid fixed-bottom p-3 bg-black">
-      <!-- 1130 加了d-flex justify-content-center -->
       <div class="form-check d-flex justify-content-center">
-        <!-- 1130 加了me-2 -->
         <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckChange">
         <label class="form-check-label text-white" for="flexCheckDefault">
           <span>我已閱讀並同意</span><div class="text-change" data-bs-toggle="offcanvas" data-bs-target="#ChangeBottom" aria-controls="ChangeBottom">變更客戶基本資料申請書</div>
         </label>
       </div>
 
-      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
+      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom">
+        <!-- 1213 <i class="bi bi-exclamation-circle pe-2"></i> 改 <img src="images/Union.svg" class="mbo-3"> -->
+        <img src="images/Union.svg" class="mbo-3">
+        注意事項
+      </div>
 
       <div class="d-flex justify-content-between">
-        <!-- 1130 按鈕都加了h48 -->
         <button type="button" class="btn btn-secondary btn50 h48">取消</button>
         <button type="button" class="btn btn-secondary btn50 h48" disabled>確認</button>
       </div>
@@ -103,9 +102,10 @@
     <div class="offcanvas offcanvas-bottom Off-CB-75" tabindex="-1" id="ChangeBottom" aria-labelledby="ChangeNote">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="ChangeNote">變更客戶基本資料申請書</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <!-- 1204 增加 text-gradient-on -->
+      <!-- 1213 新增 text-gradient-on -->
       <div class="offcanvas-body p-3 text-gradient-on">
         <div class="changebox">
           <div class="changetitle text-center pb-3">元大證券金融股份有限公司<br>變更客戶基本資料申請書</div>
@@ -115,15 +115,26 @@
           <p class="note-text" title="3.">若本人提供之資料內容有虛偽不實，以致本人或貴公司或任何第三人權益蒙受損害時，本人願意負擔一切法律及賠償之責任，概與貴公司無涉。</p>
         </div>
       </div>
-      <!-- 1204 增加 pt-0 -->
+      <!-- 1213 bg-dark 改為 bg-dark-gradient -->
       <div class="container-fluid bg-dark-gradient text-center p-3 pt-0">
-        <!-- 1130 新增『閱讀』二字 -->
-        <!-- 1204 bi-chevron-bar-up 改為 bi-chevron-bar-down -->
-        <button type="button" class="btn dropup mb-3">請向下滑動閱讀<i class="bi bi-chevron-bar-down ps-2"></i></button>
-        <!-- 1130 修改文字『請向上滑動閱讀』 -->
-        <!-- 1204 bi-chevron-bar-down 改為 bi-chevron-bar-up -->
-        <button type="button" class="btn dropdown mb-3">請向上滑動閱讀<i class="bi bi-chevron-bar-up ps-2"></i></button>
-        <button type="button" class="btn btn-secondary w-100" id="ChangeBottomSubmit" disabled>確認送出</button>
+        <!-- 1213 bi-chevron-bar-down 改為 bi-chevron-bar-up；文字“下”改為“上” -->
+        <!-- 1213 
+             刪除 <i class="bi bi-chevron-bar-up ps-2"></i>
+             新增 <img src="images/lowest_outline.svg" class="ps-2 mbo-3">
+        -->
+        <!-- 1213 新增 dropup-type -->
+        <button type="button" class="btn dropup mb-3 dropup-type">請向上滑動閱讀 <img src="images/lowest_outline.svg" class="ps-2 mbo-3"></button>
+        <!-- <button type="button" class="btn dropup mb-3">請向上滑動閱讀<i class="bi bi-chevron-bar-up ps-2"></i></button> -->
+        <!-- 1213 bi-chevron-bar-up 改為 bi-chevron-bar-down；文字“上”改為“下” -->
+        <!-- 1213 
+             刪除 <i class="bi bi-chevron-bar-up ps-2"></i>
+             新增 <img src="images/lowest_outline.svg" class="ps-2 mbo-3">
+        -->
+        <!-- 1213 新增 dropup-type -->
+        <button type="button" class="btn dropdown mb-3  dropup-type">請向下滑動閱讀<img src="images/lowest_outline.svg" class="ps-2 mbo-3"></button>
+        <!-- <button type="button" class="btn dropdown mb-3">請向下滑動閱讀<i class="bi bi-chevron-bar-down ps-2"></i></button> -->
+        <!-- 1213 增加 h48 -->
+        <button type="button" class="btn btn-secondary w-100 h48" id="ChangeBottomSubmit" disabled>確認送出</button>
       </div>
     </div>
 
@@ -131,7 +142,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="noteBottom" aria-labelledby="note">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="note">注意事項</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-3">
         <p class="note-text" title="1.">＊為必填欄位。</p>

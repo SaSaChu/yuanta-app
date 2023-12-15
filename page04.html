@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
-    <title></title>
+    <title>page04</title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/page02.js"></script>
@@ -45,7 +45,6 @@
       </div>
     </header>
 
-    <!-- 1130 加了mb-130 -->
     <main class="pt65 mb-130">
       <div class="container-fluid p-4">
         <!-- 區塊01 -->
@@ -64,14 +63,16 @@
         </div>
 
         <!-- 區塊02 -->
-        <p class="text-white mb-3 fw400">欲變更銀行帳號</p>
+        <!-- 1213 刪除 fw400 新增 t-h6 -->
+        <p class="text-white mb-3 t-h6">欲變更銀行帳號</p>
 
         <!-- 修改的銀行帳號 -->
         <div class="row g-3" method="post" action>
 
           <!-- 銀行名稱 -->
           <div class="col-12">
-            <label for=" " class="form-label text-white">銀行名稱</label>
+            <!-- 1213 新增 input-h7 -->
+            <label for=" " class="form-label text-white input-h7">銀行名稱</label>
             <input type="hidden" name="industryInput">
             <!-- 新增自製 select 連動行業別的光箱 (form-select-bg css 寫在上面)-->
             <div class="form-select form-select-bg" data-bs-toggle="offcanvas" data-bs-target="#bankBottom" aria-controls="bankBottom">
@@ -81,7 +82,8 @@
 
           <!-- 分行名稱 -->
           <div class="col-12">
-            <label for=" " class="form-label text-white">分行名稱</label>
+            <!-- 1213 新增 input-h7 -->
+            <label for=" " class="form-label text-white input-h7">分行名稱</label>
             <input type="hidden" name="industryInput">
             <!-- 新增自製 select 連動行業別的光箱 (form-select-bg css 寫在上面)-->
             <div class="form-select form-select-bg" data-bs-toggle="offcanvas" data-bs-target="#branchyBottom" aria-controls="branchyBottom">
@@ -90,40 +92,51 @@
           </div>
 
           <div class="col-12">
-            <label for=" " class="form-label w-100 text-white">帳號</label>
+            <!-- 1213 新增 input-h7 -->
+            <label for=" " class="form-label w-100 text-white input-h7">帳號</label>
             <input type=" " class="form-control" id=" " placeholder="請輸入欲變更的銀行帳號">
           </div>
 
           <div class="col-12">
-            <span class="text-white fw400">銀行存摺封面</span>
+            <!-- 1213 新增 input-h7 -->
+            <span class="text-white fw400 input-h7">銀行存摺封面</span>
             <div class="allboxs bg-gray2 rounded p-3 my-2">
               <div class="row g-3">
-                <div class="col-9"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
-                <div class="col-3"><button type="button" class="btn btn-primary float-end">上傳</button></div>
+                <!-- 1213 col-9 改 col-8 -->
+                <div class="col-8"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
+                <!-- 1213 col-3 改 col-4 -->
+                <div class="col-4"><button type="button" class="btn btn-primary float-end">上傳</button></div>
               </div>
             </div>
           </div>
 
           <div class="col-12">
-            <span class="text-white fw400">手持身分證合照</span>
+            <!-- 1213 新增 input-h7 -->
+            <span class="text-white fw400 input-h7">手持身分證合照</span>
             <div class="allboxs bg-gray2 rounded p-3 my-2">
               <div class="row g-3">
-                <div class="col-9"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
-                <div class="col-3"><button type="button" class="btn btn-primary float-end">上傳</button></div>
+                <!-- 1213 col-9 改 col-8 -->
+                <div class="col-8"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
+                <!-- 1213 col-3 改 col-4 -->
+                <div class="col-4"><button type="button" class="btn btn-primary float-end">上傳</button></div>
               </div>
             </div>
           </div>
+          <!-- 1213 新增 <div class="note14 mt-0 text-danger">請上傳檔案</div> -->
+          <div class="note14 mt-0 text-danger">請上傳檔案</div>
         </div>
       </div>
     </main>
 
     
-    <!-- 1130 加了bg-black、fixed-bottom -->
     <div class="container-fluid p-3 bg-black fixed-bottom">
-      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
+      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom">
+        <!-- 1213 <i class="bi bi-exclamation-circle pe-2"></i> 改 <img src="images/Union.svg" class="mbo-3"> -->
+        <img src="images/Union.svg" class="mbo-3">
+        注意事項
+      </div>
 
       <div class="d-flex justify-content-between">
-        <!-- 1130 按鈕都加了h48 -->
         <button type="button" class="btn btn-secondary btn50 h48">取消</button>
         <button type="button" class="btn btn-primary btn50 h48">下一步</button>
       </div>
@@ -136,7 +149,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="bankBottom" aria-labelledby="industry">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="industry">銀行名稱</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">
@@ -159,7 +173,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="branchyBottom" aria-labelledby="industry">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="industry">分行名稱</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">
@@ -182,7 +197,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="noteBottom" aria-labelledby="note">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="note">注意事項</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-3">
         <p class="note-text" title="1.">＊為必填欄位。</p>

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
-    <title></title>
+    <title>page03_1</title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
@@ -36,30 +36,44 @@
       </div>
     </header>
 
-    <!-- 1130 加了mb-130 -->
     <main class="pt65 mb-130">
       <div class="container-fluid p-4">
         <!-- 集保帳號列表 -->
         <div class="allboxs bg-gray2 rounded px-3 py-2 mb-4">
            <ul class="list-group list-group-flush">
-              <li class="list-group-item lgi px-0">
-                <p>9862*****67</p>
+              <!-- 1213 新增 list-group-type -->
+              <li class="list-group-item list-group-type lgi px-0">
+                <!-- 1213 修改左右顯示 -->
+                <p class="float-start">元大證券-南京分公司</p>
+                <p class="float-end">9862*****67</p>
               </li>
-              <li class="list-group-item lgi px-0">
-                <p>9862*****67</p>
+              <!-- 1213 新增 list-group-type -->
+              <li class="list-group-item list-group-type lgi px-0">
+                <!-- 1213 修改左右顯示 -->
+                <p class="float-start">元大證券-南京分公司</p>
+                <p class="float-end">9862*****67</p>
               </li>
-              <li class="list-group-item lgi px-0">
-                <p>9862*****67</p>
+              <!-- 1213 新增 list-group-type -->
+              <li class="list-group-item list-group-type lgi px-0 text-gradient-on">
+                <!-- 1213 修改左右顯示 -->
+                <p class="float-start">元大證券-南京分公司</p>
+                <p class="float-end">9862*****67</p>
               </li>
-              <li class="list-group-item lgi px-0">
-                <p>9862*****67</p>
+              <!-- 1213 新增 list-group-type -->
+              <li class="list-group-item list-group-type lgi px-0">
+                <!-- 1213 修改左右顯示 -->
+                <p class="float-start">元大證券-南京分公司</p>
+                <p class="float-end">9862*****67</p>
               </li>
-              <li class="list-group-item lgi px-0">
-                <p>9862*****67</p>
+              <!-- 1213 新增 list-group-type -->
+              <li class="list-group-item list-group-type lgi px-0">
+                <!-- 1213 修改左右顯示 -->
+                <p class="float-start">元大證券-南京分公司</p>
+                <p class="float-end">9862*****67</p>
               </li>
             </ul>
-          <div class="text-note list-toggle pt-2">
-            <span class="list-toggle-text">查看更多</span><i class="bi bi-chevron-up ps-2"></i>
+          <div class="text-note list-toggle pt-2 on">
+            <span class="list-toggle-text">查看更多</span><i class="bi bi-chevron-down ps-2"></i>
           </div>
         </div>
 
@@ -67,7 +81,12 @@
         <!-- 輸入集保帳號 01 -->
         <div class="allboxs border-b mb-3 pb-3">
           <div class="row g-3">
-            <div class="col-12"><button class="text-white float-end bg-transparent"><i class="bi bi-trash"></i></button></div>
+            <div class="col-12">
+              <!-- 1213 拿掉 text-white、<i class="bi bi-trash"></i> 新增 <img src="images/trash_outline.svg"> -->
+              <button class="float-end bg-transparent">
+                <img src="images/trash_outline.svg">
+              </button>
+            </div>
             <div class="col-12 mt-0">
               <label for=" " class="form-label w-100 text-white fw400">集保帳號</label>
               <input type=" " class="form-control" id=" " value="08945878576">
@@ -75,13 +94,19 @@
 
             <div class="col-12">
               <span class="text-white fw400">集保存摺</span>
-              <i class="bi bi-exclamation-circle text-lbule ps-2" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom"></i>
+              <!-- 
+                1213 刪除 <i class="bi bi-exclamation-circle text-lbule ps-2" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
+                改
+                <img src="images/Union.svg" class="ps-1" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
+               -->
+              <img src="images/Union.svg" class="ps-1" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
             </div>
           </div>
           
           <div class="allboxs bg-gray2 rounded p-3 my-2">
             <div class="row g-3">
-              <div class="col-9">
+              <!-- 1213 col-9 改 col-8 -->
+              <div class="col-8">
                 <div class="d-flex align-items-center">
                   <div class="flex-shrink-0">
                     <img src="images/pic01.png" alt=" ">
@@ -89,16 +114,17 @@
                   <div class="flex-grow-1 note14 ms-3">IMG12345.png</div>
                 </div>
               </div>
-              <div class="col-3"><button type="button" class="btn btn-secondary float-end">刪除</button></div>
+              <!-- 1213 col-3 改 col-4 -->
+              <div class="col-4"><button type="button" class="btn btn-secondary float-end">刪除</button></div>
             </div>
           </div>
         </div>
 
         <!-- 輸入集保帳號 02 -->
-        <!-- 列表的最後一項，要拿掉 border-b mb-3 pb-3 -->
         <div class="allboxs">
           <div class="row g-3">
-            <div class="col-12"><button class="text-white float-end bg-transparent"><i class="bi bi-trash"></i></button></div>
+            <!-- 1213 拿掉 <i class="bi bi-trash"></i> 新增 <img src="images/trash_outline.svg"> -->
+            <div class="col-12"><button class="text-white float-end bg-transparent"><img src="images/trash_outline.svg"></button></div>
             <div class="col-12 mt-0">
               <label for=" " class="form-label w-100 text-white fw400">集保帳號</label>
               <input type=" " class="form-control" id=" " placeholder="請輸入欲新增的集保帳號">
@@ -106,29 +132,43 @@
 
             <div class="col-12">
               <span class="text-white fw400">集保存摺</span>
-              <i class="bi bi-exclamation-circle text-lbule ps-2" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom"></i>
+              <!-- 
+                1213 刪除 <i class="bi bi-exclamation-circle text-lbule ps-2" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
+                改
+                <img src="images/Union.svg" class="ps-1" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
+               -->
+              <img src="images/Union.svg" class="ps-1" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
             </div>
           </div>
           <div class="allboxs bg-gray2 rounded p-3 my-2">
             <div class="row g-3">
-              <div class="col-9"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
-              <div class="col-3"><button type="button" class="btn btn-primary float-end">上傳</button></div>
+              <!-- 1213 col-9 改 col-8 -->
+              <div class="col-8"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
+              <!-- 1213 col-3 改 col-4 -->
+              <div class="col-4"><button type="button" class="btn btn-primary float-end">上傳</button></div>
             </div>
           </div>
         </div>
 
 
         <p class="note14">最多新增 3 筆</p>
-        <a class="addnew float-end"><i class="bi bi-plus pe-1"></i>再新增一筆</a>
+        <!--
+          1213 刪除 <a class="addnew float-end"><i class="bi bi-plus pe-1"></i>再新增一筆</a>
+          改
+          <a class="addnew float-end body-02-Link"><img src="images/Vector.svg" class="mbo-3 me-2">再新增一筆</a>
+        -->
+        <a class="addnew float-end body-02-Link"><img src="images/Vector.svg" class="mbo-3 me-2">再新增一筆</a>
       </div>
     </main>
 
-    <!-- 1130 加了bg-black、fixed-bottom -->
     <div class="container-fluid p-3 bg-black fixed-bottom">
-      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
+      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom">
+        <!-- 1213 <i class="bi bi-exclamation-circle pe-2"></i> 改 <img src="images/Union.svg" class="mbo-3"> -->
+        <img src="images/Union.svg" class="mbo-3">
+        注意事項
+      </div>
 
       <div class="d-flex justify-content-between">
-        <!-- 1130 按鈕都加了h48 -->
         <button type="button" class="btn btn-secondary btn50 h48">取消</button>
         <button type="button" class="btn btn-primary btn50 h48">下一步</button>
       </div>
@@ -144,7 +184,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="financialBottom" aria-labelledby="note">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="note">集保存摺</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
 
       <div class="offcanvas-body p-3">
@@ -166,7 +207,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="noteBottom" aria-labelledby="note">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="note">注意事項</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-3">
         <p class="note-text" title="1.">＊為必填欄位。</p>

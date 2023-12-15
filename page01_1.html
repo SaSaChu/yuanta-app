@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
-    <title></title>
+    <title>page01_1</title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
@@ -67,13 +67,14 @@
 
 
           <!-- 02.行動電話 -->
-          <div class="col-8">
+          <div class="col-7">
             <label for="inputnumber" class="form-label w-100 text-white">行動電話</label>
             <input type=" " class="form-control" id=" " value="0912 *** 456">
           </div>
-          <div class="col-4">
+          <div class="col-5">
             <label for="inputnumber" class="form-label">驗證碼</label>
-            <button type="button" class="w-100 btn btn-primary">發送驗證碼</button>
+            <!-- 1213 新增 h42 -->
+            <button type="button" class="w-100 btn btn-primary h42">發送驗證碼</button>
           </div>
           <div class="col-12 mt-2"><p class="note14">0911 *** 333</p></div>
 
@@ -133,7 +134,7 @@
 
           <!-- 05.行業別 -->
           <div class="col-12">
-            <label for=" " class="form-label text-white">行業別</label>
+            <label for=" " class="form-label text-white input-h7">行業別</label>
             <!-- 新增隱藏 input 用來放選擇後的值 -->
             <input type="hidden" name="industryInput">
             <!-- 新增自製 select 連動行業別的光箱 (form-select-bg css 寫在header)-->
@@ -166,12 +167,14 @@
       </div>
     </main>
 
-    <!-- 1130 加了bg-black、fixed-bottom -->
     <div class="container-fluid p-3 bg-black fixed-bottom">
-      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
+      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom">
+        <!-- 1213 <i class="bi bi-exclamation-circle pe-2"></i> 改 <img src="images/Union.svg" class="mbo-3"> -->
+        <img src="images/Union.svg" class="mbo-3">
+        注意事項
+      </div>
 
       <div class="d-flex justify-content-between">
-        <!-- 1130 按鈕都加了h48 -->
         <button type="button" class="btn btn-secondary btn50 h48">取消</button>
         <button type="button" class="btn btn-primary btn50 h48">下一步</button>
       </div>
@@ -184,7 +187,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="noteBottom" aria-labelledby="note">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="note">注意事項</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-3">
         <p class="note-text" title="1.">＊為必填欄位。</p>
@@ -200,17 +204,14 @@
 
 
     <!-- 行業別的光箱 -->
-    <!-- 1130 Off-CB-auto 改 Off-CB-85 -->
     <div class="offcanvas offcanvas-bottom Off-CB-85" tabindex="-1" id="industryBottom" aria-labelledby="industry">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="industry">行業別</div>
-        <!-- 1130 拿掉 btn-close-white text-reset-->
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">
           <!-- data-value，可修改值 -->
-          <!-- 1130 選中的選項樣式參考第一個li，增加text-llbule、<i class="bi bi-check2 fs-5 text-llbule float-end"></i> -->
           <li class="list-group-item text-llbule" data-value="1">行業別-1 <i class="bi bi-check2 fs-5 text-llbule float-end"></i></li>
           <li class="list-group-item" data-value="2">行業別-2</li>
           <li class="list-group-item" data-value="3">行業別-3</li>
@@ -240,7 +241,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="liningBottom" aria-labelledby="industry">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="industry">里</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">
@@ -274,7 +276,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="areaBottom" aria-labelledby="industry">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="industry">區</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">
@@ -308,7 +311,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="cityBottom" aria-labelledby="industry">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="industry">市</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="list-group list-group-flush">

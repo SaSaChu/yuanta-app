@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
-    <title></title>
+    <title>page02</title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
@@ -36,7 +36,6 @@
       </div>
     </header>
 
-    <!-- 1130 加了mb-130 -->
     <main class="pt65 mb-130 ">
       <div class="container-fluid p-4">
         <!-- 區塊01 -->
@@ -45,12 +44,21 @@
             <div class="col-8"><div class="text-grey">目前額度</div></div>
             <div class="col-4"><div class="text-white text-end">100 萬</div></div>
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <label for=" " class="form-label text-white fw400">申請額度</label>
-              <!-- 1130 新增 input-bg-black -->
               <div class="input-group mb-3 input-bg-black">
                 <input type="text" class="form-control" aria-label=" " aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">萬</span>
+                <span class="input-group-text nt-grey" id="basic-addon2">萬</span>
+              </div>
+            </div>
+            -->
+
+            <!-- 1213 原47-54行，改為57-63，input.html也有調整樣式『1213 上傳財力證明顯示金額-尚未輸入』 -->
+            <div class="col-12">
+              <label for="inputnumber" class="form-label w-100 text-white input-h7">申請額度</label>
+              <div class="input-group border-grey bg-gray3">
+                <input type="text" class="form-control" aria-label="" aria-describedby="button-addon2">
+                <span class="bg-gray3 fs-6 input-group-text nt-grey pe-2 d-flex align-items-center rounded-r25">萬</span>
               </div>
             </div>
 
@@ -66,7 +74,12 @@
         <!-- 區塊02 -->
         <div class="mb-2">
           <span class="text-white fw400">財力證明</span>
-          <i class="bi bi-exclamation-circle text-lbule ps-2" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom"></i>
+          <!-- 
+            1213 刪除 <i class="bi bi-exclamation-circle text-lbule ps-2" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
+            改
+            <img src="images/Union.svg" class="ps-1" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
+           -->
+          <img src="images/Union.svg" class="ps-1" data-bs-toggle="offcanvas" data-bs-target="#financialBottom" aria-controls="financialBottom">
         </div>
 
         <!-- 上傳財力證明顯示金額 -->
@@ -78,27 +91,34 @@
         <!-- 上傳區 -->
         <div class="allboxs bg-gray2 rounded p-3 my-2">
           <div class="row g-3">
-            <div class="col-9"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
-            <div class="col-3"><button type="button" class="btn btn-primary float-end">上傳</button></div>
+            <!-- 1213 col-9 改 col-8 -->
+            <div class="col-8"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
+            <!-- 1213 col-3 改 col-4 -->
+            <div class="col-4"><button type="button" class="btn btn-primary float-end">上傳</button></div>
           </div>
         </div>
 
         <p class="note14">最多新增 6 筆</p>
 
-        <a class="addnew float-end"><i class="bi bi-plus pe-1"></i>再新增一筆</a>
+        <!--
+          1213 刪除 <a class="addnew float-end"><i class="bi bi-plus pe-1"></i>再新增一筆</a>
+          改
+          <a class="addnew float-end body-02-Link"><img src="images/Vector.svg" class="mbo-3 me-2">再新增一筆</a>
+        -->
+        <a class="addnew float-end body-02-Link"><img src="images/Vector.svg" class="mbo-3 me-2">再新增一筆</a>
       </div>
     </main>
 
-    <!-- 1130 加了bg-black、fixed-bottom -->
     <div class="container-fluid p-3 bg-black fixed-bottom">
-      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom"><i class="bi bi-exclamation-circle pe-2"></i>注意事項</div>
+      <div class="text-note pb-3" data-bs-toggle="offcanvas" data-bs-target="#noteBottom" aria-controls="noteBottom">
+        <!-- 1213 <i class="bi bi-exclamation-circle pe-2"></i> 改 <img src="images/Union.svg" class="mbo-3"> -->
+        <img src="images/Union.svg" class="mbo-3">
+        注意事項
+      </div>
 
       <div class="d-flex justify-content-between">
-        <!-- 1130 按鈕都加了h48 -->
         <a class="btn btn-secondary btn50 h48">取消</a>
         <a class="btn btn-primary btn50 h48">下一步</a>
-        <!-- <button type="button" class="btn btn-secondary btn50">取消</button>
-        <button type="button" class="btn btn-primary btn50">下一步</button> -->
       </div>
     </div>
 
@@ -109,7 +129,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="financialBottom" aria-labelledby="note">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="note">財力證明</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
 
       <div class="offcanvas-body p-3">
@@ -130,7 +151,8 @@
     <div class="offcanvas offcanvas-bottom Off-CB-auto" tabindex="-1" id="noteBottom" aria-labelledby="note">
       <div class="offcanvas-header">
         <div class="text-industry-title fw400" id="note">注意事項</div>
-        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- 1213 拿掉 btn-close-white text-reset-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body p-3">
         <p class="note-text" title="1.">＊為必填欄位。</p>

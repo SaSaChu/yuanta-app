@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
-    <title></title>
+    <title>input</title>
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
@@ -41,23 +41,45 @@
       <div class="container-fluid p-4">
         <div class="row g-3" method="post" action>
 
-          <!-- 1204 上傳財力證明顯示金額 Typing -->
+          <!-- 1213 上傳財力證明顯示金額-尚未輸入 -->
           <div class="col-12">
-            <label for="inputnumber" class="form-label w-100 text-white">上傳財力證明顯示金額-Typing</label>
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">上傳財力證明顯示金額-尚未輸入</label>
+            <div class="input-group border-grey bg-gray3">
+              <input type="text" class="form-control" aria-label="" aria-describedby="button-addon2">
+              <span class="bg-gray3 fs-6 input-group-text nt-grey pe-2 d-flex align-items-center rounded-r25">萬</span>
+            </div>
+          </div>
+
+          <!-- 1213 上傳財力證明顯示金額-輸入完成 -->
+          <div class="col-12">
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">上傳財力證明顯示金額-輸入完成</label>
+            <div class="input-group border-grey bg-gray3">
+              <input type="text" class="form-control" value="600" aria-label="" aria-describedby="button-addon2">
+              <span class="bg-gray3 fs-6 text-white nt-grey pe-2 d-flex align-items-center rounded-r25">萬</span>
+            </div>
+          </div>
+
+          <!-- 上傳財力證明顯示金額 Typing -->
+          <div class="col-12">
+            <!-- 1213 新增input-h7 -->
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">上傳財力證明顯示金額-Typing</label>
             <div class="input-group border-white bg-gray3">
               <input type="text" class="form-control" value="輸入文字" aria-label="" aria-describedby="button-addon2">
-              <button class="btn btn-typing" type="button" id="button-addon2"><i class="bi bi-x-circle"></i></button>
+              <!-- 1213 刪除<i class="bi bi-x-circle">，新增<img src="images/Frame565054.svg"> -->
+              <button class="btn btn-typing" type="button" id="button-addon2"><img src="images/Frame565054.svg"></button>
               <span class="bg-gray3 fs-6 text-white pe-2 d-flex align-items-center rounded-r25">萬</span>
             </div>
             <div class="note14 mt-2">0911 *** 333</div>
           </div>
 
-          <!-- 1204 上傳財力證明顯示金額 Error -->
+          <!-- 上傳財力證明顯示金額 Error -->
           <div class="col-12">
-            <label for="inputnumber" class="form-label w-100 text-white">上傳財力證明顯示金額-Error</label>
+            <!-- 1213 新增input-h7 -->
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">上傳財力證明顯示金額-Error</label>
             <div class="input-group border-danger bg-gray3">
               <input type="text" class="form-control" value="輸入文字" aria-label="" aria-describedby="button-addon2">
-              <span class="d-flex align-items-center px-10px"><img src="images/11.svg"></span>
+              <!-- 1213 修改images -->
+              <span class="d-flex align-items-center px-10px"><img src="images/Frame565054.svg"></span>
               <span class="bg-gray3 fs-6 text-white pe-2 d-flex align-items-center rounded-r25">萬</span>
             </div>
             <div class="note14 mt-2 text-danger">0911 *** 333</div>
@@ -66,7 +88,8 @@
 
           <!-- Inputs狀態 Default-->
           <div class="col-12">
-            <label for="inputnumber" class="form-label w-100 text-white">標籤-Default <i class="text-danger i-style ms-1">*</i></label>
+            <!-- 1213 新增input-h7 -->
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">標籤-Default <i class="text-danger i-style ms-1">*</i></label>
             <input type=" " class="form-control" id=" " placeholder="輸入文字">
             <div class="note14 mt-2">0911 *** 333</div>
           </div>
@@ -74,7 +97,8 @@
           
          <!-- Inputs狀態 active-->
           <div class="col-12">
-            <label for="inputnumber" class="form-label w-100 text-white">標籤-Active</label>
+            <!-- 1213 新增input-h7 -->
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">標籤-Active</label>
             <input type=" " class="form-control" id=" " value="輸入文字">
             <div class="note14 mt-2">0911 *** 333</div>
           </div>
@@ -82,24 +106,28 @@
 
          <!-- Inputs狀態 Typing-->
           <div class="col-12">
-            <label for="inputnumber" class="form-label w-100 text-white">標籤-Typing</label>
+            <!-- 1213 新增input-h7 -->
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">標籤-Typing</label>
             <div class="input-group border-white">
               <input type="text" class="form-control right-r" value="輸入文字" aria-label="" aria-describedby="button-addon2">
-              <button class="btn btn-typing left-r" type="button" id="button-addon2"><i class="bi bi-x-circle"></i></button>
+              <!-- 1213 刪除<i class="bi bi-x-circle">，新增<img src="images/Frame565054.svg"> -->
+              <button class="btn btn-typing left-r" type="button" id="button-addon2"><img src="images/Frame565054.svg"></button>
             </div>
             <div class="note14 mt-2">0911 *** 333</div>
           </div>
 
           <!-- Inputs狀態 Error -->
           <div class="col-12">
-            <label for="validationServer03" class="form-label w-100 text-white">標籤-Error</label>
+            <!-- 1213 新增input-h7 -->
+            <label for="validationServer03" class="form-label w-100 text-white input-h7">標籤-Error</label>
             <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" value="0912 *** 456" required>
             <div id="validationServer03Feedback" class="invalid-feedback">錯誤的說明文字</div>
           </div>
 
           <!-- Inputs狀態 Warning -->
           <div class="col-12">
-            <label for="validationServer03" class="form-label w-100 text-white">標籤-Warning</label>
+            <!-- 1213 新增input-h7 -->
+            <label for="validationServer03" class="form-label w-100 text-white input-h7">標籤-Warning</label>
             <input type="text" class="form-control is-valid" id="validationServer03" aria-describedby="validationServer03Feedback" value="0912 *** 456" required>
             <div id="validationServer03Feedback" class="valid-feedback">警告的說明文字</div>
           </div>
@@ -107,7 +135,8 @@
 
           <!-- Inputs狀態 Disabled-->
           <div class="col-12">
-            <label for="inputnumber" class="form-label w-100 text-white">標籤-Disabled</label>
+            <!-- 1213 新增input-h7 -->
+            <label for="inputnumber" class="form-label w-100 text-white input-h7">標籤-Disabled</label>
             <input type=" " class="form-control text-dis" id=" " value="輸入文字" disabled>
             <div class="note14 mt-2">0911 *** 333</div>
           </div>
@@ -116,7 +145,8 @@
           <!-- Inputs後面加上btn -->
           <h3 class="text-warning mt-5">Inputs後面加上btn</h3>
           <div class="col-12">
-            <label for="inputnumber" class="form-label w-100 text-white">標籤</label>
+            <!-- 1213 新增input-h7 -->
+            <label for="inputnumber" class="form-label w-100 text-white" input-h7>標籤</label>
             <div class="input-group">
               <input type=" " class="form-control me-3" id=" " placeholder="請輸入驗證碼">
               <button type="button" class="btn btn btn-primary">進行驗證</button>
