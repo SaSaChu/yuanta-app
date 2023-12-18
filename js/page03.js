@@ -14,10 +14,12 @@ $(function() {
 	function dropButtonToggle(direction) {
 		if(direction == 'up') {
 			sectionDownBtn.hide();	
-			sectionUpBtn.show();	
+			// 20231218
+			// 刪除 sectionUpBtn.show();	
 		} else if (direction == 'down') {
 			sectionDownBtn.show();	
-			sectionUpBtn.hide();		
+			// 20231218
+			// 刪除 sectionUpBtn.hide();		
 		}
 	}
 	
