@@ -45,6 +45,7 @@ $(function() {
 			})
 	
 			sectionDownBtn.click(function() {
+				// 20231218 修改 請向下滑動閱讀按鈕」點擊後，不會滑到底的問題：  sectionBody.height() 改為 sectionBody.outerHeight() 
 				sectionBody.animate({ scrollTop: sectionBody.outerHeight() }, 1000);
 			})
 
