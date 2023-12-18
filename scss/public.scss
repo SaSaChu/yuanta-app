@@ -229,6 +229,12 @@ header {
   border:  #323232 !important;
 }
 
+.text-dis2 {
+  color: #525252 !important;
+  background-color: #525252 !important;
+  border:  #525252 !important;
+}
+
 .lgi14 {
   font-size: .9rem !important;
 }
@@ -493,9 +499,9 @@ header {
   }
 }
 
-.form-control:disabled, .form-control[readonly] {
-  background-color: transparent !important;
-}
+// .form-control:disabled, .form-control[readonly] {
+//   background-color: transparent !important;
+// }
 
 
 .list-group-item {
