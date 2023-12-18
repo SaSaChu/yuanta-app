@@ -45,7 +45,7 @@ $(function() {
 			})
 	
 			sectionDownBtn.click(function() {
-				sectionBody.animate({ scrollTop: sectionBody.height() }, 1000);
+				sectionBody.animate({ scrollTop: sectionBody.outerHeight() }, 1000);
 			})
 
 			sectionUpBtn.click(function() {
