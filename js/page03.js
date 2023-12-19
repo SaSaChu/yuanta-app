@@ -35,8 +35,10 @@ $(function() {
 					sectionBody.removeClass('text-gradient-on')
 					sectionBody.addClass('text-gradient-off')
 				}
-	
-				if (sectionBody.scrollTop() + sectionBody.innerHeight() <= sectionBody.innerHeight()) {
+				// 1219 更改判斷條件 (sectionBody.scrollTop() + sectionBody.innerHeight() < sectionBody.innerHeight()) 改為
+				// 方法1：向上滑到一半時顯示請下滑動閱讀 & 禁止確認送出 -> (sectionBody.scrollTop() < (sectionBody[0].scrollHeight - sectionBody.innerHeight()) / 2)
+				// 方法2：只要向上滑動就顯示請下滑動閱讀 & 禁止確認送出 -> (sectionBody.scrollTop() + sectionBody.innerHeight() < sectionBody[0].scrollHeight)
+				if (sectionBody.scrollTop() + sectionBody.innerHeight() < sectionBody[0].scrollHeight) {
 					dropButtonToggle('down');
 					sectionSubmitBtn.removeClass('enabled').attr('disabled','');
 					sectionBody.addClass('text-gradient-off')	
