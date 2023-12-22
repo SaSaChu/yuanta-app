@@ -3010,8 +3010,8 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 html { font-size: 16px; }
 
 body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #000; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; font-weight: 300; text-size-adjust: none; -webkit-text-size-adjust: none; background-color: black; }
-body ::-webkit-scrollbar-thumb { background-color: #929599; border-radius: 4px; }
-body ::-webkit-scrollbar { width: 3px; }
+body ::-webkit-scrollbar-thumb { background-color: #606060; border-radius: 4px; }
+body ::-webkit-scrollbar { width: 3px; height: 3px; }
 
 a { text-decoration: none !important; }
 a:after, a:before { vertical-align: middle !important; }
@@ -3081,7 +3081,7 @@ header { display: inline-block; width: 100%; height: 65px; background-color: #27
 
 .lgi14 { font-size: .9rem !important; }
 
-.note-text { display: inline-block; width: calc(100% - 18px); font-size: .9rem; padding-bottom: 10px; color: white; margin-left: 20px; }
+.note-text { display: inline-block; width: calc(100% - 18px); font-size: .9rem; padding-bottom: 10px; color: white; margin-left: 1rem; }
 .note-text:before { display: inline-block; content: attr(title); margin-left: -17px; font-weight: bolder; margin-right: 5px; }
 .note-text.dot { width: calc(100% - 40px); margin-left: 31px; }
 .note-text.nospace { margin-left: 2px; padding-bottom: 20px; }
