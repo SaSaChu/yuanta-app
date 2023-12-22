@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 16px;  
 }
 
 body {
@@ -31,6 +31,20 @@ body {
   -webkit-text-size-adjust:none;
 
   background-color: black;
+
+  // 20231213 新增 總是顯示 scrollbar
+  ::-webkit-scrollbar-thumb {
+
+    background-color: rgba(146, 149, 153, 1.00);
+    
+    @include border-radius(4px);  
+  }
+
+  // 20231213 新增 總是顯示 scrollbar
+  ::-webkit-scrollbar {
+    width: 3px;
+    @include box-shadow(inset -3px 0 3px rgba(39, 40, 34, 1.00));
+  }
 }
 
 a {

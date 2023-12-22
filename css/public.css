@@ -3010,6 +3010,8 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 html { font-size: 16px; }
 
 body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #000; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; font-weight: 300; text-size-adjust: none; -webkit-text-size-adjust: none; background-color: black; }
+body ::-webkit-scrollbar-thumb { background-color: #929599; border-radius: 4px; }
+body ::-webkit-scrollbar { width: 3px; }
 
 a { text-decoration: none !important; }
 a:after, a:before { vertical-align: middle !important; }
