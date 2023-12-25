@@ -32,13 +32,13 @@ body {
 
   background-color: black;
 
-  // 20231213 新增 總是顯示 scrollbar
+  // 20231213 新增 總是顯示 scrollbar & scrollbar 顏色調整
   & ::-webkit-scrollbar-thumb {
-    background-color: #606060;
+    background-color: #BCBCBC;
     @include border-radius(4px);  
   }
 
-  // 20231213 新增 總是顯示 scrollbar
+  // 20231213_2 新增 總是顯示 scrollbar，P.s當 x 軸出現時，高度調為 3 px
   & ::-webkit-scrollbar {
     width: 3px;
     height: 3px;
