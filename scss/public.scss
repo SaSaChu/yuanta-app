@@ -100,7 +100,11 @@ header {
   width: 100%;
   background-color: #272727;
   color: white;
-  padding: 1.3rem; 
+  padding: 1.3rem;
+
+  &.full-w {
+    height: 100vh;
+  }
 }
 
 .box24 {
