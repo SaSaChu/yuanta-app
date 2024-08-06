@@ -147,7 +147,7 @@
               <!-- 1213 col-9 改 col-8 -->
               <div class="col-8"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
               <!-- 1213 col-3 改 col-4 -->
-              <div class="col-4"><button type="button" class="btn btn-primary float-end">上傳</button></div>
+              <div class="col-4"><button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">上傳</button></div>
             </div>
           </div>
         </div>
@@ -180,7 +180,24 @@
 
 
     <!-- 以下是光箱區 -->
-
+    <!-- 上傳提示 光箱 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/bank-cover.jpg" class="img-fluid mb-3">
+            <ul>
+              <li>請上傳您已填帳號之存摺封面。</li>
+              <li>存摺照片<i class="text-danger nostyle">須含戶名、集保帳號</i>（證商代號與編號）</li>
+              <li>請參考<a href="">下載說明</a></li>
+            </ul>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">我已了解</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- 集保存摺的光箱 -->

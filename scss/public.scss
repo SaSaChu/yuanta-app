@@ -467,10 +467,18 @@ header {
   background-color: black;
 }
 
+.nostyle {
+  font-style: normal;
+}
+
 
 
 
 // boost
+.modal-footer {
+  border-top: 0 !important;
+}
+
 .btn {
   padding: 0.375rem 16px !important;
 

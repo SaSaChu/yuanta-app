@@ -133,7 +133,7 @@
                 <!-- 1213 col-9 改 col-8 -->
                 <div class="col-8"><div class="note14">只能上傳 pdf、png、jpg 檔，且檔案不超過 5MB</div></div>
                 <!-- 1213 col-3 改 col-4 -->
-                <div class="col-4"><button type="button" class="btn btn-primary float-end">上傳</button></div>
+                <div class="col-4"><button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal2">上傳</button></div>
               </div>
             </div>
           </div>
@@ -157,7 +157,24 @@
 
 
     <!-- 以下是光箱區 -->
-
+    <!-- 身分證上傳提示 光箱 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/idcover.jpg" class="img-fluid mb-3">
+            <ul>
+              <li><i class="text-danger nostyle">證件資訊務必清晰，勿裁切反光或模糊、手指勿遮蔽證件。</i></li>
+              <li>臉和證件皆須完整入鏡。</li>
+              <li>請勿戴口罩、帽子。</li>
+            </ul>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">我已了解</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- 銀行的光箱 -->
